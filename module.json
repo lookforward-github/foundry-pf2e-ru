@@ -1,0 +1,33 @@
+{
+  "id": "pf2e-ru",
+  "title": "Неофициальный русскоязычный перевод Pathfinder 2e для Foundry VTT",
+  "description": "Перевод основан на материалах https://pf2.ru/",
+  "authors": [
+    {
+      "id": "Vladislav Teterin",
+      "url": "https://github.com/lookforward-github"
+    }
+  ],
+
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+
+  "url": "https://github.com/lookforward-github/foundry-pf2e-ru",
+  "manifest": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/module.json",
+  "download": "https://github.com/lookforward-github/foundry-pf2e-ru/archive/refs/heads/main.zip",
+  "license": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/LICENSE",
+  "readme": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/README.md",
+  "bugs": "https://t.me/pf2ru_chat",
+  "system": ["pf2e"],
+
+  "esmodules": [
+    "scripts/init.js"
+  ],
+
+  "packs": [
+
+  ]
+}

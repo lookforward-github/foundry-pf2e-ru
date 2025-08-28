@@ -1,2 +1,3 @@
-# foundry-pf2e-ru
-Неофициальный русскоязычный перевод Pathfinder 2e для Foundry VTT
+# Неофициальный русскоязычный перевод Pathfinder 2e для Foundry VTT
+
+Перевод основан на материалах https://pf2.ru/
