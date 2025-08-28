@@ -16,10 +16,10 @@
   },
 
   "url": "https://github.com/lookforward-github/foundry-pf2e-ru",
-  "manifest": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/module.json",
   "download": "https://github.com/lookforward-github/foundry-pf2e-ru/archive/refs/heads/main.zip",
-  "license": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/LICENSE",
-  "readme": "https://github.com/lookforward-github/foundry-pf2e-ru/blob/main/README.md",
+  "manifest": "https://raw.githubusercontent.com/lookforward-github/foundry-pf2e-ru/refs/heads/main/module.json",
+  "license": "https://raw.githubusercontent.com/lookforward-github/foundry-pf2e-ru/refs/heads/main/LICENSE",
+  "readme": "https://raw.githubusercontent.com/lookforward-github/foundry-pf2e-ru/refs/heads/main/README.md",
   "bugs": "https://t.me/pf2ru_chat",
   "system": ["pf2e"],
 
