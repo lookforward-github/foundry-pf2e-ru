@@ -1,0 +1,12 @@
+node_modules
+.cache
+package-lock.json
+LICENSE
+
+# Артефакты сборки и выгрузки источников — формат задаёт генератор
+# (module.json переписывает `npm run sync:manifest`)
+module.json
+lang
+translations
+sheets/snapshot
+fixtures/api

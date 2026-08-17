@@ -1,0 +1,31 @@
+{
+  "spreadsheetId": "ЗАМЕНИТЕ-НА-ID-ТАБЛИЦЫ",
+  "sheets": [
+    {
+      "sheet": "UI",
+      "type": "i18n",
+      "target": "lang/ru.json",
+      "keyColumn": "Key",
+      "columns": {
+        "value": "RU"
+      },
+      "skipWhen": {
+        "Status": ["", "draft"]
+      }
+    },
+    {
+      "sheet": "Spells",
+      "type": "babele",
+      "target": "translations/ru/pf2e.spells-srd.json",
+      "packLabel": "Заклинания",
+      "keyColumn": "Name EN",
+      "columns": {
+        "name": "Название",
+        "description": "Описание"
+      },
+      "skipWhen": {
+        "Статус": ["", "черновик"]
+      }
+    }
+  ]
+}

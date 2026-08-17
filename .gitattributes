@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# Артефакты сборки: не правятся руками, свёрнуты в диффах на GitHub
+lang/**/*.json          linguist-generated=true
+translations/**/*.json  linguist-generated=true
+
+# Выгрузки источников: коммитятся ради воспроизводимости, но это не рукопись
+sheets/snapshot/**/*.json linguist-generated=true
+fixtures/api/**/*.json    linguist-generated=true
