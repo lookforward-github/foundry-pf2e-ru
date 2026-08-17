@@ -137,3 +137,20 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# --- pf2e-ru ---------------------------------------------------------------
+# Кэш сетевых запросов сборки
+.cache/
+
+# Локальные креды для `npm run pull:*`
+.env
+
+# Стейджинг релизного архива
+module.zip
+
+# Коммитятся намеренно (не убирать в игнор — на них держится
+# воспроизводимость сборки и ревью переводов):
+#   sheets/snapshot/  выгрузка Google Sheets
+#   fixtures/api/     выгрузка API сайта переводов
+#   lang/             собранный i18n
+#   translations/     собранные Babele-переводы

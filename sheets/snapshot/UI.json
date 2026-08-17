@@ -1,0 +1,24 @@
+{
+  "sheet": "UI",
+  "header": ["Key", "EN", "RU", "Status"],
+  "rows": [
+    {
+      "Key": "PF2E.ActionsCheck.Athletics",
+      "EN": "Athletics check",
+      "RU": "Проверка Атлетики",
+      "Status": "ready"
+    },
+    {
+      "Key": "PF2E.Actor.Character.Level",
+      "EN": "Level",
+      "RU": "Уровень",
+      "Status": "ready"
+    },
+    {
+      "Key": "PF2E.NotTranslatedYet",
+      "EN": "Work in progress",
+      "RU": "",
+      "Status": "draft"
+    }
+  ]
+}

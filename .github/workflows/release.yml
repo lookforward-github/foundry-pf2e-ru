@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run validate
+
+      - name: Версия из тега
+        id: version
+        run: echo "value=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      # Foundry требует, чтобы version в манифесте совпадала с релизом, а
+      # manifest/download указывали на конкретные ассеты этого релиза.
+      - name: Подстановка версии и ссылок в манифест
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+          BASE: https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}
+        run: |
+          jq --arg version "$VERSION" \
+             --arg manifest "$BASE/module.json" \
+             --arg download "$BASE/module.zip" \
+             '.version = $version | .manifest = $manifest | .download = $download' \
+             module.json > module.patched.json
+          mv module.patched.json module.json
+
+      # В архив идёт только то, что нужно Foundry в рантайме.
+      - name: Сборка архива
+        run: |
+          zip -r module.zip \
+            module.json \
+            LICENSE \
+            README.md \
+            scripts \
+            styles \
+            lang \
+            translations
+
+      - name: Публикация релиза
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            module.json
+            module.zip
+          fail_on_unmatched_files: true

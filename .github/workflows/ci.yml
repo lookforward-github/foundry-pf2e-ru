@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Типы сборочных скриптов
+        run: npm run typecheck
+
+      - name: Форматирование
+        run: npm run format:check
+
+      # --check падает, если пересборка из источников даёт другой результат:
+      # значит, кто-то поправил lang/ или translations/ руками либо забыл
+      # закоммитить результат сборки.
+      - name: Сборка воспроизводима
+        run: npm run build -- --check
+
+      - name: Линт артефактов
+        run: npm run validate

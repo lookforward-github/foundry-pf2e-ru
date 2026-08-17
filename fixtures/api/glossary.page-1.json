@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": "t-0001",
+      "slug": "flat-footed",
+      "en": "Flat-Footed",
+      "ru": "застигнутой врасплох",
+      "updatedAt": "2026-01-15T10:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "perPage": 200,
+    "total": 1
+  }
+}

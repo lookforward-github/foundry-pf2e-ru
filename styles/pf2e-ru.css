@@ -1,0 +1,8 @@
+/* Стили модуля перевода. Пока нужны только для блока «Оригинал» под описанием,
+   который включается настройкой keepOriginalDescription. */
+
+.pf2e-ru-original > summary {
+  cursor: pointer;
+  font-variant: small-caps;
+  opacity: 0.7;
+}

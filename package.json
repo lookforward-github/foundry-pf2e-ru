@@ -1,0 +1,31 @@
+{
+  "name": "pf2e-ru",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Сборочный конвейер для модуля перевода pf2e-ru",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "pull": "npm run pull:sheets && npm run pull:api",
+    "pull:sheets": "tsx tools/pull-sheets.ts",
+    "pull:api": "tsx tools/pull-api.ts",
+    "build": "tsx tools/build.ts",
+    "validate": "tsx tools/validate.ts",
+    "report": "tsx tools/report.ts",
+    "sync:manifest": "tsx tools/sync-manifest.ts",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

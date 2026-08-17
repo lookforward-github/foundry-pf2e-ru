@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "e-0001",
+      "type": "spell",
+      "slug": "magic-missile",
+      "name": {
+        "en": "Magic Missile",
+        "ru": "Магическая стрела"
+      },
+      "fields": {
+        "description": "<p>Снаряд чистой силы, который всегда попадает в цель.</p>"
+      },
+      "updatedAt": "2026-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "e-0002",
+      "type": "spell",
+      "slug": "fireball",
+      "name": {
+        "en": "Fireball",
+        "ru": "Огненный шар"
+      },
+      "fields": {},
+      "updatedAt": "2026-01-15T10:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "perPage": 200,
+    "total": 2
+  }
+}
